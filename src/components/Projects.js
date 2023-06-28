@@ -2,21 +2,21 @@ import ProjectCard from "./Cards/ProjectCard";
 
 const Projects = () => {
   const projects = [
-    {
-      title: "React E-commerce",
-      description: "A responsive e-commerce website built with React.",
-      technologies: ["React", "Redux", "CSS", "JavaScript"],
-      image:
-        "https://pwpblog.wpengine.com/wp-content/uploads/2022/08/Ecommerce-Website-Promotion_Final.png",
-      github: "https://github.com/your-username/project1",
-    },
+    // {
+    //   title: "React E-commerce",
+    //   description: "A responsive e-commerce website built with React.",
+    //   technologies: ["React", "Redux", "CSS", "JavaScript"],
+    //   image:
+    //     "https://pwpblog.wpengine.com/wp-content/uploads/2022/08/Ecommerce-Website-Promotion_Final.png",
+    //   github: "https://github.com/your-username/project1",
+    // },
     {
       title: "Weather App",
       description:
         "A mobile weather application that displays current weather data.",
-      technologies: ["ReactNative", "REST", "JS"],
+      technologies: ["ReactNative", "REST", "JS", "CSS"],
       image: "https://cdn.jim-nielsen.com/ios/512/weather-2021-12-07.png",
-      github: "https://github.com/your-username/project2",
+      github: "https://github.com/rvs9/WeatherApp",
     },
     {
       title: "Food Delivery",
@@ -25,7 +25,7 @@ const Projects = () => {
       technologies: ["React", "Redux", "CSS", "JavaScript"],
       image:
         "https://blog.ipleaders.in/wp-content/uploads/2019/11/foodmitho.jpg",
-      github: "https://github.com/your-username/project2",
+      github: "https://github.com/rvs9/Swiggy-clone-React",
     },
     // Add more projects here
   ];
@@ -39,7 +39,7 @@ const Projects = () => {
         <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-800">
           Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-12 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols- gap-8 mx-12 mt-16">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
