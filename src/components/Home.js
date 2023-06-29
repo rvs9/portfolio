@@ -1,4 +1,4 @@
-import dp from "../assets/DP11.jpg";
+import dp from "../assets/DP-new.jpeg";
 import linkedInLogo from "../assets/linkedIn-logo.png";
 import gitLogoW from "../assets/github-logo(w).png";
 import twitterLogo from "../assets/twitter-logo.png";
@@ -12,20 +12,17 @@ import scccsLogo from "../assets/scss-icon.svg";
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white">
-      <section
-        id="home"
-        className="py-10 bg-white md:px-8 lg:px-16  w-full"
-      >
+      <section id="home" className="py-10 bg-white md:px-8 lg:px-16  w-full">
         <div className="container mx-auto md:mx-36 flex flex-col md:flex-row items-center justify-center pt-16">
-          <div className="w-full md:w-1/2 text-center md:text-left">
+          <div className="w-full md:w-1/2 text-center md:text-left md:mr-16">
             <h2 className="text-4xl md:text-6xl font-bold">
               Front-End React Developer
             </h2>
-            <p className="mt-4 text-base md:text-lg">
+            <p className="mt-6 text-base md:text-lg">
               Hi, I'm Rajat Saraswat, an experienced Front-end React Developer
               based in Bangalore, India. 📍
             </p>
-            <div className="flex ">
+            <div className="flex mt-6">
               <a
                 href="https://www.linkedin.com/in/rajatsaraswat9/"
                 target="_blank"
@@ -52,12 +49,16 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="flex items-center mt-4 text-blue-500 hover:text-blue-700"
               >
-                <img src={twitterLogo} alt="twitter" className="h-10 w-10 mr-2" />
+                <img
+                  src={twitterLogo}
+                  alt="twitter"
+                  className="h-10 w-10 mr-2"
+                />
               </a>
             </div>
           </div>
 
-          <div className="md:w-1/2  mt-8 md:mt-0">
+          <div className="md:w-1/2 mt-8 md:mt-0">
             <img
               src={dp}
               alt="profile"
