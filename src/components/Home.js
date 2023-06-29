@@ -6,6 +6,7 @@ import htmlLogo from "../assets/html-icon.svg";
 import cssLogo from "../assets/css3-icon.svg";
 import jsLogo from "../assets/javascript-icon.svg";
 import reactLogo from "../assets/react-icon.svg";
+import reduxLogo from "../assets/redux-logo.png";
 import tailwindLogo from "../assets/tailwind-icon.svg";
 import scccsLogo from "../assets/scss-icon.svg";
 
@@ -16,7 +17,7 @@ const Home = () => {
         <div className="container mx-auto md:mx-36 flex flex-col md:flex-row items-center justify-center pt-16">
           <div className="w-full md:w-1/2 text-center md:text-left md:mr-16">
             <h2 className="text-4xl md:text-6xl font-bold">
-              Front-End React Developer
+              Front-End React Developer 🤙🏻
             </h2>
             <p className="mt-6 text-base md:text-lg">
               Hi, I'm Rajat Saraswat, an experienced Front-end React Developer
@@ -95,6 +96,13 @@ const Home = () => {
               <img
                 src={reactLogo}
                 alt="React"
+                className="h-8 w-8 object-contain"
+              />
+            </div>
+            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-1 my-2">
+              <img
+                src={reduxLogo}
+                alt="Redux"
                 className="h-8 w-8 object-contain"
               />
             </div>

@@ -21,21 +21,22 @@ const About = () => {
               A dedicated Front-end Developer based in Bangalore, India. 📍
             </h2>
             <p className="mt-4">
-              As a Junior Front-End Developer, I possess an impressive arsenal
-              of skills in React, Redux, JavaScript, Tailwind, HTML, CSS, and
-              SCSS. I excel in creating responsive and user-friendly web
-              applications. With a strong passion for clean code and
-              problem-solving, I strive to deliver high-quality solutions that
-              meet client requirements.
+              As a junior front-end developer, I bring a solid set of skills to
+              the table, including React, Redux, JavaScript, Tailwind, HTML,
+              CSS, and SCSS. My focus is on building responsive and
+              user-friendly web applications that hit the mark. I excel in
+              creating responsive and user-friendly web applications. With a
+              strong passion for clean code and problem-solving, I strive to
+              deliver high-quality solutions that meet client requirements.
             </p>
 
             <p className="mt-4">
-              In addition to my technical skills, I am a strong communicator and
-              a collaborative team player. I thrive in fast-paced environments
-              and enjoy working on challenging projects that push my limits and
-              allow me to continuously learn and grow. I am constantly seeking
-              new opportunities to expand my knowledge and stay up-to-date with
-              the latest trends and advancements in web development.
+              But it's not just about the technical stuff. I pride myself on
+              being a strong communicator and a team player. I love diving into
+              fast-paced environments and tackling challenging projects that
+              push me to grow. Clean code and problem-solving are my jam, and
+              I'm committed to delivering high-quality solutions that meet
+              client needs.
             </p>
             <Resume />
           </div>
