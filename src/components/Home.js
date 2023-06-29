@@ -22,7 +22,7 @@ const Home = () => {
               Hi, I'm Rajat Saraswat, an experienced Front-end React Developer
               based in Bangalore, India. 📍
             </p>
-            <div className="flex mt-6">
+            <div className="flex mt-4 ml-2">
               <a
                 href="https://www.linkedin.com/in/rajatsaraswat9/"
                 target="_blank"
@@ -68,44 +68,44 @@ const Home = () => {
         </div>
 
         <div className="flex items-center justify-start mx-4 md:mx-36 mt-16 w-full mx-auto">
-          <p className="mr-12 font-bold">Tech Stack |</p>
-          <div className="flex flex-wrap items-center justify-center mt-2">
-            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-2 my-2">
+          <p className="mr-4 font-bold">Tech Stack |</p>
+          <div className="flex flex-wrap items-center justify-center  mt-2">
+            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-1 my-2">
               <img
                 src={htmlLogo}
                 alt="HTML"
                 className="h-8 w-8 md:h-8 md:w-8 object-contain"
               />
             </div>
-            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-2 my-2">
+            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-1 my-2">
               <img
                 src={cssLogo}
                 alt="CSS"
                 className="h-8 w-8 md:h-8 md:w-8 object-contain"
               />
             </div>
-            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-2 my-2">
+            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-1 my-2">
               <img
                 src={jsLogo}
                 alt="JavaScript"
                 className="h-8 w-8 md:h-8 md:w-8 object-contain"
               />
             </div>
-            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-2 my-2">
+            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-1 my-2">
               <img
                 src={reactLogo}
                 alt="React"
                 className="h-8 w-8 object-contain"
               />
             </div>
-            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-2 my-2">
+            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-1 my-2">
               <img
                 src={tailwindLogo}
                 alt="Tailwind CSS"
                 className="h-8 w-8 object-contain"
               />
             </div>
-            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-2 my-2">
+            <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-1 my-2">
               <img
                 src={scccsLogo}
                 alt="SCSS"
