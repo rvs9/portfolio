@@ -16,15 +16,11 @@ const NavBar = () => {
         </h1>
         <button
           type="button"
-          className={`${
-            isMenuOpen ? "fixed top-0 right-0 m-4" : "mr-6 md:hidden"
-          }`}
+          className="mr-6 md:hidden"
           onClick={toggleMenu}
         >
           <svg
-            className={`w-6 h-6  text-black ${
-              isMenuOpen ? "hidden" : "block"
-            } md:hidden`}
+            className={`w-6 h-6 text-black ${isMenuOpen ? "hidden" : "block"}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -38,9 +34,7 @@ const NavBar = () => {
             />
           </svg>
           <svg
-            className={`w-6 h-6text-black ${
-              isMenuOpen ? "block" : "hidden"
-            } md:hidden`}
+            className={`w-6 h-6 text-black ${isMenuOpen ? "block" : "hidden"}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -54,11 +48,7 @@ const NavBar = () => {
             />
           </svg>
         </button>
-        <ul
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } md:flex flex-wrap space-x-4 text-xl font-bold mx-4 text-black`}
-        >
+        <ul className="hidden md:flex flex-wrap space-x-4 text-xl font-bold mx-4 text-black">
           <li>
             <ScrollLink
               to="home"
@@ -66,7 +56,6 @@ const NavBar = () => {
               smooth={true}
               duration={500}
               className="hover:text-blue-600"
-              onClick={toggleMenu}
             >
               Home
             </ScrollLink>
@@ -78,7 +67,6 @@ const NavBar = () => {
               smooth={true}
               duration={500}
               className="hover:text-blue-600"
-              onClick={toggleMenu}
             >
               About
             </ScrollLink>
@@ -90,7 +78,6 @@ const NavBar = () => {
               smooth={true}
               duration={500}
               className="hover:text-blue-600"
-              onClick={toggleMenu}
             >
               Projects
             </ScrollLink>
@@ -102,7 +89,6 @@ const NavBar = () => {
               smooth={true}
               duration={500}
               className="hover:text-blue-500"
-              onClick={toggleMenu}
             >
               Blog
             </ScrollLink>
@@ -114,13 +100,78 @@ const NavBar = () => {
               smooth={true}
               duration={500}
               className="hover:text-blue-600"
-              onClick={toggleMenu}
             >
               Contact
             </ScrollLink>
           </li>
         </ul>
       </div>
+      {isMenuOpen && (
+        <div className="md:hidden">
+          <ul className="text-xl font-bold text-black mt-2">
+            <li>
+              <ScrollLink
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="block py-2 px-4 hover:bg-blue-100"
+                onClick={toggleMenu}
+              >
+                Home
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="block py-2 px-4 hover:bg-blue-100"
+                onClick={toggleMenu}
+              >
+                About
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="block py-2 px-4 hover:bg-blue-100"
+                onClick={toggleMenu}
+              >
+                Projects
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="blog"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="block py-2 px-4 hover:bg-blue-100"
+                onClick={toggleMenu}
+              >
+                Blog
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="block py-2 px-4 hover:bg-blue-100"
+                onClick={toggleMenu}
+              >
+                Contact
+              </ScrollLink>
+            </li>
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
