@@ -22,7 +22,7 @@ const Home = () => {
               Hi, I'm Rajat Saraswat, an experienced Front-end React Developer
               based in Bangalore, India. 📍
             </p>
-            <div className="flex mt-4 ml-2">
+            <div className="flex mt-4 ">
               <a
                 href="https://www.linkedin.com/in/rajatsaraswat9/"
                 target="_blank"

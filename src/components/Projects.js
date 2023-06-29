@@ -39,7 +39,7 @@ const Projects = () => {
         <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-800">
           Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols- gap-8 mx-12 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols- lg:grid-cols- gap-8 mx-12 mt-16">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
