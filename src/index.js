@@ -60,12 +60,11 @@ const appRouter = createBrowserRouter([
         element: <DebouncingAndThrottlingBlog />,
       },
     ],
-    
   },
   {
-    path:"blogs",
-    element:<Blog/>
-  }
+    path: "/blogs",
+    element: <Blog />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
