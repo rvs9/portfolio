@@ -27,7 +27,8 @@ const Blog = () => {
               <p className="mt-2 text-base text-gray-600">
                 GraphQL is the developer-friendly query language for the modern
                 web. It transforms how apps fetch data from an API, enabling you
-                to get exactly what you want.
+                to get exactly what you want by By providing a more efficient
+                and flexible way to fetch resources.
               </p>
               <div className="mt-4">
                 <Link

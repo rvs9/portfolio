@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext, useMemo } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const ReactHooks = () => {
-
   return (
     <>
       <section id="react-hooks-blog" className="bg-gray-100 py-24 min-h-screen">

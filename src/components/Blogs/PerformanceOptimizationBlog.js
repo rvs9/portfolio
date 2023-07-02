@@ -34,9 +34,8 @@ const PerformanceOptimizationBlog = () => {
                   provide suitable examples to help you understand and implement
                   them effectively.
                 </p>
-
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  Minimizing Re-renders with React.memo()
+                  1. Minimizing Re-renders with React.memo()
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
                   One of the fundamental optimization techniques in React is
@@ -48,7 +47,6 @@ const PerformanceOptimizationBlog = () => {
                   the result of a component's rendering, skipping unnecessary
                   re-renders if the component's props remain the same.
                 </p>
-
                 {/* Example */}
                 <div className="border rounded-lg overflow-hidden mt-4">
                   <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
@@ -73,91 +71,7 @@ export default MemoizedComponent;`}
                   </p>
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  Memoizing Expensive Computations with useMemo()
-                </h3>
-                <p className="mt-2 text-base text-gray-600">
-                  In addition to memoizing components with React.memo(), you can
-                  also memoize expensive computations or function results using
-                  the useMemo() hook. useMemo() allows you to memoize the result
-                  of a function and only recompute it if the dependencies
-                  change. This can be useful when you have computationally
-                  expensive operations that are called frequently.
-                </p>
-
-                {/* Example */}
-                <div className="border rounded-lg overflow-hidden mt-4">
-                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
-                    Example: Memoizing Computed Value
-                  </h4>
-                  <pre className="p-4">
-                    <code className="text-gray-800">
-                      {`import React, { useMemo } from "react";
-
-const MyComponent = ({ data }) => {
-  const computedValue = useMemo(() => {
-    // Expensive computation
-    return compute(data);
-  }, [data]);
-
-  return <div>{computedValue}</div>;
-};
-
-export default MyComponent;`}
-                    </code>
-                  </pre>
-                  <p className="p-4 text-base text-gray-600">
-                    In this example, the "computedValue" is memoized using
-                    useMemo(). It will only be recomputed if the "data" prop
-                    changes, avoiding unnecessary computations and improving
-                    performance.
-                  </p>
-                </div>
-                <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  Code Splitting with React.lazy() and Suspense
-                </h3>
-                <p className="mt-2 text-base text-gray-600">
-                  Code splitting is a technique that allows you to split your
-                  React application into smaller chunks, which are loaded
-                  on-demand. React.lazy() and Suspense are built-in React
-                  features that enable code splitting. With React.lazy(), you
-                  can dynamically import components, and Suspense provides a
-                  fallback UI while the component is being loaded.
-                </p>
-
-                {/* Example */}
-                <div className="border rounded-lg overflow-hidden mt-4">
-                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
-                    Example: Code Splitting with React.lazy() and Suspense
-                  </h4>
-                  <pre className="p-4">
-                    <code className="text-gray-800">
-                      {`import React, { lazy, Suspense } from "react";
-
-const MyLazyComponent = lazy(() => import("./MyComponent"));
-
-const App = () => (
-  <div>
-    <Suspense fallback={<div>Loading...</div>}>
-      <MyLazyComponent />
-    </Suspense>
-  </div>
-);
-
-export default App;`}
-                    </code>
-                  </pre>
-                  <p className="p-4 text-base text-gray-600">
-                    In this example, MyLazyComponent is dynamically imported
-                    using React.lazy(). The Suspense component provides a
-                    fallback UI (e.g., "Loading...") while the component is
-                    being loaded asynchronously. Code splitting helps reduce the
-                    initial bundle size and improves the loading performance of
-                    your application.
-                  </p>
-                </div>
-
-                <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  Server-Side Rendering (SSR)
+                  2. Server-Side Rendering (SSR)
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
                   Server-Side Rendering (SSR) is a technique where the initial
@@ -168,7 +82,6 @@ export default App;`}
                   quickly while the JavaScript bundle is being loaded and
                   executed.
                 </p>
-
                 {/* Example */}
                 <div className="border rounded-lg overflow-hidden mt-4">
                   <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
@@ -203,7 +116,118 @@ hydrate(<App />, document.getElementById("root"));`}
                   </p>
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  Virtualized Lists with react-window
+                  3. Utilizing a Content Delivery Network (CDN)
+                </h3>
+                <p className="mt-2 text-base text-gray-600">
+                  A Content Delivery Network (CDN) is a distributed network of
+                  servers located in different geographical locations. CDN
+                  serves as an intermediary between your web application and its
+                  users, helping to optimize content delivery and improve
+                  performance. By utilizing a CDN, you can achieve the following
+                  benefits:
+                </p>
+                <ul className="list-disc pl-8 mt-2 text-base text-gray-600">
+                  <li>
+                    <strong>Reduced latency:</strong> With a CDN, content is
+                    served from servers located closer to the user's
+                    geographical location. This reduces the time it takes for
+                    the content to reach the user's device, resulting in lower
+                    latency and faster page load times.
+                  </li>
+                  <li>
+                    <strong>Improved scalability:</strong> CDNs are designed to
+                    handle high traffic volumes and distribute content across
+                    multiple servers. This improves the scalability of your
+                    application, allowing it to handle increased user demand
+                    without performance degradation.
+                  </li>
+                  <li>
+                    <strong>Bandwidth offloading:</strong> By offloading the
+                    delivery of static assets, such as images, CSS files, and
+                    JavaScript files, to a CDN, you can reduce the bandwidth
+                    usage on your web servers. This frees up server resources
+                    and improves the overall performance of your application.
+                  </li>
+                  <li>
+                    <strong>Global reach:</strong> CDNs have a global presence,
+                    with servers located in multiple regions worldwide. This
+                    enables your content to be delivered quickly to users across
+                    the globe, regardless of their geographical location,
+                    resulting in a better user experience.
+                  </li>
+                </ul>
+                {/* Example */}
+                <div className="border rounded-lg overflow-hidden mt-4">
+                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
+                    Example: Using a CDN to Serve Static Assets
+                  </h4>
+                  <pre className="p-4">
+                    <code className="text-gray-800">
+                      {`// Link to CSS file served by a CDN
+<link rel="stylesheet" href="https://cdn.example.com/styles.css">
+// Link to JavaScript file served by a CDN
+
+<script src="https://cdn.example.com/script.js"></script>
+// Image served by a CDN
+<img src="https://cdn.example.com/image.jpg" alt="CDN image">`}
+                    </code>
+                  </pre>
+
+                  <p className="p-4 text-base text-gray-600">
+                    In this example, the static assets (CSS file, JavaScript
+                    file, and image) are served by a CDN using their respective
+                    URLs. By utilizing a CDN, these assets can be delivered to
+                    users more efficiently, resulting in improved performance
+                    and user experience.
+                  </p>
+                </div>
+                <p className="mt-2 text-base text-gray-600">
+                  By incorporating a CDN into your web application's
+                  architecture, you can optimize content delivery, reduce
+                  latency, improve scalability, offload bandwidth, and ensure a
+                  better user experience, regardless of the user's location.
+                </p>
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                  4. Memoizing Expensive Computations with useMemo()
+                </h3>
+                <p className="mt-2 text-base text-gray-600">
+                  In addition to memoizing components with React.memo(), you can
+                  also memoize expensive computations or function results using
+                  the useMemo() hook. useMemo() allows you to memoize the result
+                  of a function and only recompute it if the dependencies
+                  change. This can be useful when you have computationally
+                  expensive operations that are called frequently.
+                </p>
+                {/* Example */}
+                <div className="border rounded-lg overflow-hidden mt-4">
+                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
+                    Example: Memoizing Computed Value
+                  </h4>
+                  <pre className="p-4">
+                    <code className="text-gray-800">
+                      {`import React, { useMemo } from "react";
+
+const MyComponent = ({ data }) => {
+  const computedValue = useMemo(() => {
+    // Expensive computation
+    return compute(data);
+  }, [data]);
+
+  return <div>{computedValue}</div>;
+};
+
+export default MyComponent;`}
+                    </code>
+                  </pre>
+                  <p className="p-4 text-base text-gray-600">
+                    In this example, the "computedValue" is memoized using
+                    useMemo(). It will only be recomputed if the "data" prop
+                    changes, avoiding unnecessary computations and improving
+                    performance.
+                  </p>
+                </div>
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                  5. Virtualized Lists with react-window
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
                   When dealing with large lists in React, rendering all the
@@ -213,7 +237,6 @@ hydrate(<App />, document.getElementById("root"));`}
                   significantly improves performance by reducing the number of
                   DOM elements and enhancing scrolling performance.
                 </p>
-
                 {/* Example */}
                 <div className="border rounded-lg overflow-hidden mt-4">
                   <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
@@ -251,8 +274,114 @@ export default MyList;`}
                     performance when dealing with large datasets.
                   </p>
                 </div>
+
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  Lazy Loading and Code Splitting with React.lazy()
+                  6. Code Splitting
+                </h3>
+                <p className="mt-2 text-base text-gray-600">
+                  Code splitting is a technique that allows you to split your
+                  React application into smaller chunks, which are loaded
+                  on-demand. React.lazy() and Suspense are built-in React
+                  features that enable code splitting. With React.lazy(), you
+                  can dynamically import components, and Suspense provides a
+                  fallback UI while the component is being loaded.
+                </p>
+                {/* Example */}
+                <div className="border rounded-lg overflow-hidden mt-4">
+                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
+                    Example: Code Splitting with React.lazy() and Suspense
+                  </h4>
+                  <pre className="p-4">
+                    <code className="text-gray-800">
+                      {`import React, { lazy, Suspense } from "react";
+
+const MyLazyComponent = lazy(() => import("./MyComponent"));
+
+const App = () => (
+  <div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <MyLazyComponent />
+    </Suspense>
+  </div>
+);
+
+export default App;`}
+                    </code>
+                  </pre>
+                  <p className="p-4 text-base text-gray-600">
+                    In this example, MyLazyComponent is dynamically imported
+                    using React.lazy(). The Suspense component provides a
+                    fallback UI (e.g., "Loading...") while the component is
+                    being loaded asynchronously. Code splitting helps reduce the
+                    initial bundle size and improves the loading performance of
+                    your application.
+                  </p>
+                </div>
+
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                  7. Debouncing
+                </h3>
+                <p className="mt-2 text-base text-gray-600">
+                  Debouncing is a technique used to delay the execution of a
+                  function until after a certain amount of time has passed since
+                  the last invocation. It is commonly used for handling
+                  expensive operations triggered by user events, such as input
+                  changes or search requests. Debouncing helps reduce the number
+                  of function invocations and improves performance by preventing
+                  rapid consecutive calls.
+                </p>
+                {/* Debounce example */}
+                <div className="border rounded-lg overflow-hidden mt-4">
+                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
+                    Example: Debouncing an Input Change Event
+                  </h4>
+                  <pre className="p-4">
+                    <code className="text-gray-800">
+                      {`const handleInputChangeDebounced = debounce((event) => {
+  // Handle input change logic
+}, 300);
+
+// Usage in JSX
+<input type="text" onChange={handleInputChangeDebounced} />`}
+                    </code>
+                  </pre>
+                </div>
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                  9. Throttling
+                </h3>
+                <p className="mt-2 text-base text-gray-600">
+                  Throttling is a technique used to limit the execution of a
+                  function to a specific rate. It ensures that the function is
+                  called at most once within a given time interval, preventing
+                  excessive invocations. Throttling is commonly used for
+                  handling events that can occur frequently, such as scroll or
+                  resize events, to avoid performance degradation and
+                  unnecessary processing.
+                </p>
+                {/* Throttle example */}
+                <div className="border rounded-lg overflow-hidden mt-4">
+                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
+                    Example: Throttling a Scroll Event
+                  </h4>
+                  <pre className="p-4">
+                    <code className="text-gray-800">
+                      {`const handleScrollThrottled = throttle(() => {
+  // Handle scroll event logic
+}, 200);
+
+// Usage in JSX
+window.addEventListener("scroll", handleScrollThrottled);`}
+                    </code>
+                  </pre>
+                </div>
+                <Link
+                  to="/debounce-and-throttle"
+                  className="text-blue-500 hover:text-blue-900 mt-2 rounded focus:outline-none focus:shadow-outline"
+                >
+                  learn more about debounce and throttle in detail
+                </Link>
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                  8. Lazy Loading
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
                   Another crucial aspect of performance optimization is reducing
@@ -263,7 +392,6 @@ export default MyList;`}
                   combination with code splitting, helps reduce the initial load
                   time and improves performance.
                 </p>
-
                 {/* Example */}
                 <div className="border rounded-lg overflow-hidden mt-4">
                   <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
@@ -295,8 +423,9 @@ export default App;`}
                     while the component is being loaded.
                   </p>
                 </div>
+
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  Avoid Mutating Data
+                  10. Avoid Mutating Data
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
                   Mutating data directly can lead to unexpected behavior and
@@ -307,7 +436,6 @@ export default App;`}
                   state and enable React's efficient change detection
                   algorithms.
                 </p>
-
                 {/* Example */}
                 <div className="border rounded-lg overflow-hidden mt-4">
                   <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
@@ -333,75 +461,7 @@ const newData = [...data, 4];`}
                     effects.
                   </p>
                 </div>
-                <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  Debouncing
-                </h3>
-                <p className="mt-2 text-base text-gray-600">
-                  Debouncing is a technique used to delay the execution of a
-                  function until after a certain amount of time has passed since
-                  the last invocation. It is commonly used for handling
-                  expensive operations triggered by user events, such as input
-                  changes or search requests. Debouncing helps reduce the number
-                  of function invocations and improves performance by preventing
-                  rapid consecutive calls.
-                </p>
-
-                {/* Debounce example */}
-                <div className="border rounded-lg overflow-hidden mt-4">
-                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
-                    Example: Debouncing an Input Change Event
-                  </h4>
-                  <pre className="p-4">
-                    <code className="text-gray-800">
-                      {`const handleInputChangeDebounced = debounce((event) => {
-  // Handle input change logic
-}, 300);
-
-// Usage in JSX
-<input type="text" onChange={handleInputChangeDebounced} />`}
-                    </code>
-                  </pre>
-                </div>
-
-                <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  Throttling
-                </h3>
-                <p className="mt-2 text-base text-gray-600">
-                  Throttling is a technique used to limit the execution of a
-                  function to a specific rate. It ensures that the function is
-                  called at most once within a given time interval, preventing
-                  excessive invocations. Throttling is commonly used for
-                  handling events that can occur frequently, such as scroll or
-                  resize events, to avoid performance degradation and
-                  unnecessary processing.
-                </p>
-
-                {/* Throttle example */}
-                <div className="border rounded-lg overflow-hidden mt-4">
-                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
-                    Example: Throttling a Scroll Event
-                  </h4>
-                  <pre className="p-4">
-                    <code className="text-gray-800">
-                      {`const handleScrollThrottled = throttle(() => {
-  // Handle scroll event logic
-}, 200);
-
-// Usage in JSX
-window.addEventListener("scroll", handleScrollThrottled);`}
-                    </code>
-                  </pre>
-                </div>
-
-                <Link
-                  to="/debounce-and-throttle"
-                  className="text-blue-500 hover:text-blue-900 mt-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  learn more about debounce and throttle in detail
-                </Link>
-
                 {/* Other optimization techniques and content */}
-
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
                   Pros and Cons of Performance Optimization Techniques
                 </h3>
@@ -415,7 +475,6 @@ window.addEventListener("scroll", handleScrollThrottled);`}
                     trade-offs in development time and code readability.
                   </li>
                 </ul>
-
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
                   Conclusion
                 </h3>
@@ -430,7 +489,6 @@ window.addEventListener("scroll", handleScrollThrottled);`}
                   involved and strike a balance between performance and
                   maintainability.
                 </p>
-
                 <p className="mt-4 text-base text-gray-600">
                   Thank you for reading, if you found this article helpful, feel
                   free to share it with others.
