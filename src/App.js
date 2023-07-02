@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import "./styles/tailwind.css";
 
 import NavBar from "./components/Navbar";
@@ -9,18 +9,17 @@ import Projects from "./components/Projects";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import GraphQL from "./components/Blogs/GraphQL";
+import Main from "./components/Main";
 
 function App() {
   return (
-    <Router>
+    <>
       <NavBar />
-      <Home />
-      <About />
-      <Projects />
-      <Blog />
-      <Contact />
+      <Outlet />
+
       <Footer />
-    </Router>
+    </>
   );
 }
 

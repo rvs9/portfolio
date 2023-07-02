@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
 const NavBar = () => {
@@ -11,14 +12,10 @@ const NavBar = () => {
   return (
     <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-10">
       <div className="flex items-center justify-between h-20">
-        <h1 className="text-xl ml-12 font-bold text-black flex-grow">
+        <Link className="text-xl ml-12 font-bold text-black flex-grow" to="/">
           Rajat.dev
-        </h1>
-        <button
-          type="button"
-          className="mr-6 md:hidden"
-          onClick={toggleMenu}
-        >
+        </Link>
+        <button type="button" className="mr-6 md:hidden" onClick={toggleMenu}>
           <svg
             className={`w-6 h-6 text-black ${isMenuOpen ? "hidden" : "block"}`}
             fill="none"
@@ -83,7 +80,7 @@ const NavBar = () => {
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink
+            {/* <ScrollLink
               to="blog"
               spy={true}
               smooth={true}
@@ -91,7 +88,8 @@ const NavBar = () => {
               className="hover:text-blue-500"
             >
               Blog
-            </ScrollLink>
+            </ScrollLink> */}
+            <Link to="blogs">Blog</Link>
           </li>
           <li>
             <ScrollLink
