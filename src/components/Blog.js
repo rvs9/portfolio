@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import blogImage from "../assets/RPO-image-canva.jpg";
+import datBlogImage from "../assets/DAT-blog-Image.png";
+import graphQLBlogImage from "../assets/graphQL-blog-image.png";
 
 const Blog = () => {
   return (
@@ -8,13 +10,13 @@ const Blog = () => {
         <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-800">
           Blog
         </h2>
-        <p className="mt-4  text-center text-gray-800">
+        <p className="mt-4  text-2xl text-center text-gray-800">
           Stay up-to-date with the latest trends and insights in web dev tech!
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
           <div className="bg-white rounded-lg shadow-md">
             <img
-              src="https://www.srijan.net/hubfs/graphql-future-api.png"
+              src={graphQLBlogImage}
               alt="Blog Post"
               className="rounded-t-lg"
             />
@@ -23,7 +25,9 @@ const Blog = () => {
                 Introduction to GraphQL
               </h3>
               <p className="mt-2 text-base text-gray-600">
-                GraphQL is the developer-friendly query language for the modern web. It transforms how apps fetch data from an API, enabling you to get exactly what you want.
+                GraphQL is the developer-friendly query language for the modern
+                web. It transforms how apps fetch data from an API, enabling you
+                to get exactly what you want.
               </p>
               <div className="mt-4">
                 <Link
@@ -39,10 +43,14 @@ const Blog = () => {
             <img src={blogImage} alt="Blog Post" className="rounded-t-lg" />
             <div className="p-4">
               <h3 className="text-xl font-bold text-gray-800">
-                Introduction to GraphQL
+                Top Performance Optimizing Techniques
               </h3>
               <p className="mt-2 text-base text-gray-600">
-                As a React developer, it's essential to optimize your applications to deliver the best user experience. In this blog post, we will explore various performance optimization techniques in React and provide suitable examples to help you understand and implement them effectively.
+                As a React developer, it's essential to optimize your
+                applications to deliver the best user experience. In this blog
+                post, we will explore various performance optimization
+                techniques in React to help you understand and implement them
+                effectively.
               </p>
               <div className="mt-4">
                 <Link
@@ -55,17 +63,16 @@ const Blog = () => {
             </div>
           </div>
           <div className="bg-white rounded-lg shadow-md">
-            <img
-              src="https://tsh.io/wp-content/uploads/2020/10/react-hooks-best-practices-lead_.jpg"
-              alt="Blog Post"
-              className="rounded-t-lg"
-            />
+            <img src={datBlogImage} alt="Blog Post" className="rounded-t-lg" />
             <div className="p-4">
               <h3 className="text-xl font-bold text-gray-800">
-                Understanding React Hooks
+                Debouncing and Throttling in JavaScript
               </h3>
               <p className="mt-2 text-base text-gray-600">
-                React hooks have revolutionized the way we write React components. They make it easier to write and test reusable code and enhance the performance of our applications.
+                Whether you're dealing with frequent events or
+                resource-intensive operations, debouncing and throttling can be
+                powerful techniques to optimize performance and enhance the user
+                experience. So, let's dive in and master these JS concepts.
               </p>
               <div className="mt-4">
                 <Link
@@ -77,6 +84,31 @@ const Blog = () => {
               </div>
             </div>
           </div>
+          {/* <div className="bg-white rounded-lg shadow-md">
+            <img
+              src="https://tsh.io/wp-content/uploads/2020/10/react-hooks-best-practices-lead_.jpg"
+              alt="Blog Post"
+              className="rounded-t-lg"
+            />
+            <div className="p-4">
+              <h3 className="text-xl font-bold text-gray-800">
+                Understanding React Hooks
+              </h3>
+              <p className="mt-2 text-base text-gray-600">
+                React hooks have revolutionized the way we write React
+                components. They make it easier to write and test reusable code
+                and enhance the performance of our applications.
+              </p>
+              <div className="mt-4">
+                <Link
+                  className="py-2 px-4 bg-blue-600 text-white rounded-md font-bold text-lg shadow-md hover:bg-blue-700 transition duration-300"
+                  to="reactHooks"
+                >
+                  Read More
+                </Link>
+              </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </section>

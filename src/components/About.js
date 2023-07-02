@@ -21,13 +21,13 @@ const About = () => {
               A dedicated Front-end Developer based in Bangalore, India. 📍
             </h2>
             <p className="mt-4">
-              As a junior front-end developer, I bring a solid set of skills to
-              the table, including React, Redux, JavaScript, Tailwind, HTML,
-              CSS, and SCSS. My focus is on building responsive and
-              user-friendly web applications that hit the mark. I excel in
-              creating responsive and user-friendly web applications. With a
-              strong passion for clean code and problem-solving, I strive to
-              deliver high-quality solutions that meet client requirements.
+              As a front-end developer, I bring a solid set of skills to the
+              table, including React, Redux, JavaScript, Tailwind, HTML, CSS,
+              and SCSS. My focus is on building responsive and user-friendly web
+              applications that hit the mark. I excel in creating responsive and
+              user-friendly web applications. With a strong passion for clean
+              code and problem-solving, I strive to deliver high-quality
+              solutions that meet client requirements.
             </p>
 
             <p className="mt-4">

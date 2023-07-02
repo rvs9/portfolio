@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import graphQLBlogImage from "../../assets/graphQL-blog-image.png";
 
 const GraphQL = () => {
   return (
@@ -13,7 +14,7 @@ const GraphQL = () => {
             <div className="bg-white rounded-lg shadow-md">
               <div className="flex justify-center">
                 <img
-                  src="https://www.srijan.net/hubfs/graphql-future-api.png"
+                  src={graphQLBlogImage}
                   alt="graphQL logo"
                   className="rounded-t-lg"
                   style={{ maxWidth: "100%", height: "auto" }}

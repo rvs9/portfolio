@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import blogImage from "../../assets/RPO-image-canva.jpg"
+import blogImage from "../../assets/RPO-image-canva.jpg";
 
 const PerformanceOptimizationBlog = () => {
   return (
@@ -295,6 +295,110 @@ export default App;`}
                     while the component is being loaded.
                   </p>
                 </div>
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                  Avoid Mutating Data
+                </h3>
+                <p className="mt-2 text-base text-gray-600">
+                  Mutating data directly can lead to unexpected behavior and
+                  performance issues in React applications. It's recommended to
+                  follow the principle of immutability, where you create new
+                  objects or arrays instead of modifying the existing ones. By
+                  avoiding data mutations, you ensure predictable application
+                  state and enable React's efficient change detection
+                  algorithms.
+                </p>
+
+                {/* Example */}
+                <div className="border rounded-lg overflow-hidden mt-4">
+                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
+                    Example: Avoiding Data Mutation
+                  </h4>
+                  <pre className="p-4">
+                    <code className="text-gray-800">
+                      {`// Bad practice: Mutating data directly
+const data = [1, 2, 3];
+data.push(4);
+
+// Good practice: Creating a new array
+const newData = [...data, 4];`}
+                    </code>
+                  </pre>
+                  <p className="p-4 text-base text-gray-600">
+                    In this example, the bad practice directly mutates the
+                    `data` array by using the `push` method, which modifies the
+                    original array. The good practice creates a new array
+                    `newData` by spreading the existing `data` array and adding
+                    a new element at the end. By creating a new array, you
+                    preserve the original data and avoid unintended side
+                    effects.
+                  </p>
+                </div>
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                  Debouncing
+                </h3>
+                <p className="mt-2 text-base text-gray-600">
+                  Debouncing is a technique used to delay the execution of a
+                  function until after a certain amount of time has passed since
+                  the last invocation. It is commonly used for handling
+                  expensive operations triggered by user events, such as input
+                  changes or search requests. Debouncing helps reduce the number
+                  of function invocations and improves performance by preventing
+                  rapid consecutive calls.
+                </p>
+
+                {/* Debounce example */}
+                <div className="border rounded-lg overflow-hidden mt-4">
+                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
+                    Example: Debouncing an Input Change Event
+                  </h4>
+                  <pre className="p-4">
+                    <code className="text-gray-800">
+                      {`const handleInputChangeDebounced = debounce((event) => {
+  // Handle input change logic
+}, 300);
+
+// Usage in JSX
+<input type="text" onChange={handleInputChangeDebounced} />`}
+                    </code>
+                  </pre>
+                </div>
+
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                  Throttling
+                </h3>
+                <p className="mt-2 text-base text-gray-600">
+                  Throttling is a technique used to limit the execution of a
+                  function to a specific rate. It ensures that the function is
+                  called at most once within a given time interval, preventing
+                  excessive invocations. Throttling is commonly used for
+                  handling events that can occur frequently, such as scroll or
+                  resize events, to avoid performance degradation and
+                  unnecessary processing.
+                </p>
+
+                {/* Throttle example */}
+                <div className="border rounded-lg overflow-hidden mt-4">
+                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
+                    Example: Throttling a Scroll Event
+                  </h4>
+                  <pre className="p-4">
+                    <code className="text-gray-800">
+                      {`const handleScrollThrottled = throttle(() => {
+  // Handle scroll event logic
+}, 200);
+
+// Usage in JSX
+window.addEventListener("scroll", handleScrollThrottled);`}
+                    </code>
+                  </pre>
+                </div>
+
+                <Link
+                  to="/debounce-and-throttle"
+                  className="text-blue-500 hover:text-blue-900 mt-2 rounded focus:outline-none focus:shadow-outline"
+                >
+                  learn more about debounce and throttle in detail
+                </Link>
 
                 {/* Other optimization techniques and content */}
 
@@ -328,8 +432,8 @@ export default App;`}
                 </p>
 
                 <p className="mt-4 text-base text-gray-600">
-                  Thank you for reading, if you found this article helpful, feel free to share
-                  it with others.
+                  Thank you for reading, if you found this article helpful, feel
+                  free to share it with others.
                 </p>
               </div>
             </div>

@@ -8,6 +8,7 @@ import GraphQL from "./components/Blogs/GraphQL";
 import Home from "./components/Home";
 import ReactHooks from "./components/Blogs/ReactHooks";
 import PerformanceOptimizationBlog from "./components/Blogs/PerformanceOptimizationBlog";
+import DebouncingAndThrottlingBlog from "./components/Blogs/DebounceAndThrottling";
 
 const appRouter = createBrowserRouter([
   {
@@ -49,6 +50,14 @@ const appRouter = createBrowserRouter([
       {
         path: "blogs/Performance-Optimization-in-React",
         element: <PerformanceOptimizationBlog />,
+      },
+      {
+        path: "/debounce-and-throttle",
+        element: <DebouncingAndThrottlingBlog />,
+      },
+      {
+        path: "blogs/debounce-and-throttle",
+        element: <DebouncingAndThrottlingBlog />,
       },
     ],
   },
