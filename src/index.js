@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import Main from "./components/Main";
 import Blog from "./components/Blog";
 import GraphQL from "./components/Blogs/GraphQL";
@@ -60,6 +64,10 @@ const appRouter = createBrowserRouter([
         element: <DebouncingAndThrottlingBlog />,
       },
     ],
+  },
+  {
+    path: "/*",
+    element: <Navigate to={"index.html"} />,
   },
 ]);
 
