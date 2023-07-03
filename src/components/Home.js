@@ -16,7 +16,7 @@ const Home = () => {
       id="home"
       className="py-12 min-h-screen w-full bg-white md:px-8 lg:px-16"
     >
-      <div className="container mx-auto md:mx-36 lg:mx-60 flex flex-col md:flex-row items-center justify-center pt-16">
+      <div className="container mx-auto md:mx-36 flex flex-col md:flex-row items-center justify-center pt-16">
         <div className="w-full md:w-1/2 text-center md:text-left md:mr-16">
           <h2 className="text-4xl md:text-6xl font-bold">
             Front-End React Developer
@@ -57,13 +57,13 @@ const Home = () => {
           <img
             src={dp}
             alt="profile"
-            className="w-full pt-4 max-w-sm mx-auto lg:ml-28 md:ml-0 rounded-full shadow-lg animate-fade-in"
+            className="w-2/3 md:w-full pt-4 max-w-sm mx-auto  md:ml-0 rounded-full shadow-lg animate-fade-in"
           />
         </div>
       </div>
 
       <div className="flex flex-col items-center justify-center mx-4 md:mx-36 mt-16 md:flex-row md:items-center md:justify-start">
-        <p className="mr-4 lg:ml-24 font-bold text-center md:text-left">Tech Stack |</p>
+        <p className="mr-4  font-bold text-center md:text-left">Tech Stack |</p>
         <div className="flex flex-wrap items-center justify-center  mt-2">
           <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-1 my-2">
             <img

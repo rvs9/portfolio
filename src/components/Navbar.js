@@ -145,7 +145,7 @@ const NavBar = () => {
             </li>
             <li>
               <ScrollLink
-                to="blog"
+                to="blogs"
                 spy={true}
                 smooth={true}
                 duration={500}
