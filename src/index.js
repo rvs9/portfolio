@@ -61,10 +61,6 @@ const appRouter = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/blogs",
-    element: <Blog />,
-  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
