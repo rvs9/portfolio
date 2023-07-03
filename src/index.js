@@ -65,10 +65,7 @@ const appRouter = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/*",
-    element: <Navigate to={"index.html"} />,
-  },
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
