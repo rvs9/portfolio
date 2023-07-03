@@ -35,11 +35,11 @@ const Projects = () => {
       id="projects"
       className="py-24 min-h-screen w-full bg-white md:px-8 lg:px-16 w-full flex flex-col items-center "
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-800">
           Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols- lg:grid-cols- gap-8 mx-12 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols- lg:grid-cols- gap-8 mx-10 mt-16">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}

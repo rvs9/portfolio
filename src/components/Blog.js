@@ -5,7 +5,10 @@ import graphQLBlogImage from "../assets/graphQL-blog-image.png";
 
 const Blog = () => {
   return (
-    <section id="blog" className="bg-gray-100 py-12 sm:py-24 min-h-screen">
+    <section
+      id="projects"
+      className="py-24 min-h-screen w-full bg-gray-100 sm:px-6 md:px-8 lg:px-16  flex flex-col items-center"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-5xl font-bold text-center text-gray-800">
           Blog
@@ -13,7 +16,7 @@ const Blog = () => {
         <p className="mt-4 text-lg md:text-2xl text-center text-gray-800">
           Stay up-to-date with the latest trends and insights in web dev tech!
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 sm:mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 md:mt-12 mx-10">
           <div className="bg-white rounded-lg shadow-md">
             <img
               src={graphQLBlogImage}

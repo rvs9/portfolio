@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-10">
       <div className="flex items-center justify-between h-20">
-        <Link className="text-xl ml-12 font-bold text-black flex-grow" to="/">
+        <Link className="text-xl ml-12 font-bold text-black flex-grow" to="">
           Rajat.dev
         </Link>
         <button type="button" className="mr-6 md:hidden" onClick={toggleMenu}>
@@ -47,15 +47,15 @@ const NavBar = () => {
         </button>
         <ul className="hidden md:flex flex-wrap space-x-4 text-xl font-bold mx-4 text-black">
           <li>
-            <ScrollLink
-              to="home"
+            <Link
+              to="/"
               spy={true}
               smooth={true}
               duration={500}
               className="hover:text-blue-600"
             >
               Home
-            </ScrollLink>
+            </Link>
           </li>
           <li>
             <ScrollLink
