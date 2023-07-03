@@ -108,8 +108,8 @@ const NavBar = () => {
         <div className="md:hidden">
           <ul className="text-xl font-bold text-black mt-2">
             <li>
-              <ScrollLink
-                to="home"
+              <Link
+                to="/"
                 spy={true}
                 smooth={true}
                 duration={500}
@@ -117,7 +117,7 @@ const NavBar = () => {
                 onClick={toggleMenu}
               >
                 Home
-              </ScrollLink>
+              </Link>
             </li>
             <li>
               <ScrollLink
