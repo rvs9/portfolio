@@ -25,7 +25,7 @@ const Home = () => {
             Hi, I'm Rajat Saraswat, an experienced Front-end React Developer
             based in Bangalore, India. 📍
           </p>
-          <div className="flex mt-4 ">
+          <div className="flex mt-4 justify-center md:justify-start">
             <a
               href="https://www.linkedin.com/in/rajatsaraswat9/"
               target="_blank"
@@ -62,8 +62,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-start mx-4 md:mx-36 mt-16 w-full mx-auto">
-        <p className="mr-4 font-bold">Tech Stack |</p>
+      <div className="flex flex-col items-center justify-center mx-4 md:mx-36 mt-16 md:flex-row md:items-center md:justify-start">
+        <p className="mr-4 font-bold text-center md:text-left">Tech Stack |</p>
         <div className="flex flex-wrap items-center justify-center  mt-2">
           <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-1 my-2">
             <img
