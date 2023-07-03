@@ -107,13 +107,6 @@ const Home = () => {
               className="h-8 w-8 object-contain"
             />
           </div>
-          <div className="bg-white rounded-full shadow-lg p-2 md:p-4 mx-2 md:mx-1 my-2">
-            <img
-              src={scccsLogo}
-              alt="SCSS"
-              className="h-8 w-8 object-contain"
-            />
-          </div>
         </div>
       </div>
     </section>

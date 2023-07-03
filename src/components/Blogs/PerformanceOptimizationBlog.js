@@ -71,48 +71,46 @@ export default MemoizedComponent;`}
                   </p>
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  2. Server-Side Rendering (SSR)
+                  2. Lazy Loading
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
-                  Server-Side Rendering (SSR) is a technique where the initial
-                  rendering of a React application is performed on the server,
-                  and the resulting HTML is sent to the client. SSR can improve
-                  the perceived performance of your application by sending a
-                  pre-rendered HTML page to the client, which can be displayed
-                  quickly while the JavaScript bundle is being loaded and
-                  executed.
+                  Another crucial aspect of performance optimization is reducing
+                  the initial bundle size. Large bundle sizes can increase the
+                  initial loading time of your application. React.lazy() enables
+                  lazy loading of components, which means the components are
+                  loaded only when they are needed. This technique, in
+                  combination with code splitting, helps reduce the initial load
+                  time and improves performance.
                 </p>
                 {/* Example */}
                 <div className="border rounded-lg overflow-hidden mt-4">
                   <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
-                    Example: Server-Side Rendering (SSR)
+                    Example: Lazy Loaded Component
                   </h4>
                   <pre className="p-4">
                     <code className="text-gray-800">
-                      {`// Server
-import React from "react";
-import { renderToString } from "react-dom/server";
-import App from "./App";
+                      {`import React, { lazy, Suspense } from "react";
 
-const html = renderToString(<App />);
-// ... send the "html" to the client
+const LazyLoadedComponent = lazy(() => import("./LazyLoadedComponent"));
 
-// Client
-import React from "react";
-import { hydrate } from "react-dom";
-import App from "./App";
+const App = () => {
+return (
+  <div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <LazyLoadedComponent />
+    </Suspense>
+  </div>
+);
+};
 
-hydrate(<App />, document.getElementById("root"));`}
+export default App;`}
                     </code>
                   </pre>
                   <p className="p-4 text-base text-gray-600">
-                    In this example, the initial rendering of the React
-                    application is performed on the server using the
-                    renderToString() method from react-dom/server. The resulting
-                    HTML is sent to the client, and the hydration process (using
-                    the hydrate() method) takes place on the client side. SSR
-                    can improve the performance and SEO of your React
-                    application.
+                    In this example, the LazyLoadedComponent is loaded lazily
+                    and will only be fetched and rendered when it's required.
+                    The Suspense component allows you to provide a fallback UI
+                    while the component is being loaded.
                   </p>
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
@@ -227,7 +225,52 @@ export default MyComponent;`}
                   </p>
                 </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  5. Virtualized Lists with react-window
+                  5. Server-Side Rendering (SSR)
+                </h3>
+                <p className="mt-2 text-base text-gray-600">
+                  Server-Side Rendering (SSR) is a technique where the initial
+                  rendering of a React application is performed on the server,
+                  and the resulting HTML is sent to the client. SSR can improve
+                  the perceived performance of your application by sending a
+                  pre-rendered HTML page to the client, which can be displayed
+                  quickly while the JavaScript bundle is being loaded and
+                  executed.
+                </p>
+                {/* Example */}
+                <div className="border rounded-lg overflow-hidden mt-4">
+                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
+                    Example: Server-Side Rendering (SSR)
+                  </h4>
+                  <pre className="p-4">
+                    <code className="text-gray-800">
+                      {`// Server
+import React from "react";
+import { renderToString } from "react-dom/server";
+import App from "./App";
+
+const html = renderToString(<App />);
+// ... send the "html" to the client
+
+// Client
+import React from "react";
+import { hydrate } from "react-dom";
+import App from "./App";
+
+hydrate(<App />, document.getElementById("root"));`}
+                    </code>
+                  </pre>
+                  <p className="p-4 text-base text-gray-600">
+                    In this example, the initial rendering of the React
+                    application is performed on the server using the
+                    renderToString() method from react-dom/server. The resulting
+                    HTML is sent to the client, and the hydration process (using
+                    the hydrate() method) takes place on the client side. SSR
+                    can improve the performance and SEO of your React
+                    application.
+                  </p>
+                </div>
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                  6. Virtualized Lists with react-window
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
                   When dealing with large lists in React, rendering all the
@@ -276,7 +319,7 @@ export default MyList;`}
                 </div>
 
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  6. Code Splitting
+                  7. Code Splitting
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
                   Code splitting is a technique that allows you to split your
@@ -319,7 +362,7 @@ export default App;`}
                 </div>
 
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  7. Debouncing
+                  8. Debouncing
                 </h3>
                 <p className="mt-2 text-base text-gray-600">
                   Debouncing is a technique used to delay the execution of a
@@ -380,49 +423,6 @@ window.addEventListener("scroll", handleScrollThrottled);`}
                 >
                   learn more about debounce and throttle in detail
                 </Link>
-                <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  8. Lazy Loading
-                </h3>
-                <p className="mt-2 text-base text-gray-600">
-                  Another crucial aspect of performance optimization is reducing
-                  the initial bundle size. Large bundle sizes can increase the
-                  initial loading time of your application. React.lazy() enables
-                  lazy loading of components, which means the components are
-                  loaded only when they are needed. This technique, in
-                  combination with code splitting, helps reduce the initial load
-                  time and improves performance.
-                </p>
-                {/* Example */}
-                <div className="border rounded-lg overflow-hidden mt-4">
-                  <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
-                    Example: Lazy Loaded Component
-                  </h4>
-                  <pre className="p-4">
-                    <code className="text-gray-800">
-                      {`import React, { lazy, Suspense } from "react";
-
-const LazyLoadedComponent = lazy(() => import("./LazyLoadedComponent"));
-
-const App = () => {
-return (
-  <div>
-    <Suspense fallback={<div>Loading...</div>}>
-      <LazyLoadedComponent />
-    </Suspense>
-  </div>
-);
-};
-
-export default App;`}
-                    </code>
-                  </pre>
-                  <p className="p-4 text-base text-gray-600">
-                    In this example, the LazyLoadedComponent is loaded lazily
-                    and will only be fetched and rendered when it's required.
-                    The Suspense component allows you to provide a fallback UI
-                    while the component is being loaded.
-                  </p>
-                </div>
 
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
                   10. Avoid Mutating Data
