@@ -8,7 +8,7 @@ import jsLogo from "../assets/javascript-icon.svg";
 import reactLogo from "../assets/react-icon.svg";
 import reduxLogo from "../assets/redux-logo.png";
 import tailwindLogo from "../assets/tailwind-icon.svg";
-import scccsLogo from "../assets/scss-icon.svg";
+
 
 const Home = () => {
   return (
@@ -107,6 +107,7 @@ const Home = () => {
               className="h-8 w-8 object-contain"
             />
           </div>
+          
         </div>
       </div>
     </section>

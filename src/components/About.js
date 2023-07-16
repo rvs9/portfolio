@@ -11,8 +11,7 @@ const About = () => {
           <div className="w-full md:w-1/2 text-center ">
             <h5 className="text-lg text-blue-600 pb-4 font-bold">ABOUT ME</h5>
             <h2 className="text-4xl font-bold ">
-              Experienced Front-end Developer, capable of implementing
-              responsive and scalable UI solutions.
+              Experienced Front-end Developer based in Bangalore, India. 📍
             </h2>
             <p className="mt-4 text-left">
               As a front-end developer, I bring a solid set of skills to the
