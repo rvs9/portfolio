@@ -368,6 +368,29 @@ function throttle(cb, delay = 1000) {
                     </code>
                   </pre>
                 </div>
+                <div
+                  style={{
+                    marginTop: "20px",
+                    border: "1px solid #ccc",
+                    borderRadius: "4px",
+                    overflow: "hidden",
+                    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                  }}
+                >
+                  <iframe
+                    src="https://codesandbox.io/embed/javascript-forked-ckwf3p?fontsize=14&hidenavigation=1&theme=dark"
+                    style={{
+                      width: "100%",
+                      height: "500px",
+                      border: "0",
+                      borderRadius: "4px",
+                      overflow: "hidden",
+                    }}
+                    title="JavaScript (forked)"
+                    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+                  />
+                </div>
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
                   Explanation
                 </h3>
