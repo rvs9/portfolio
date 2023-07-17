@@ -237,10 +237,28 @@ window.addEventListener('scroll', throttledScroll);`}
                   performance issues caused by excessive function invocations
                   and can limit resource usage.
                 </p>
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                  Debounce vs Throttle Implementation Example
+                </h3>
+                <p className="mt-2 text-base text-gray-600">
+                  The provided code example demonstrates the implementation of
+                  debounce and throttle functions to handle input events on an
+                  input field. The purpose of these functions is to control how
+                  frequently the input events are processed to optimize
+                  performance.
+                </p>
 
+                <p className="mt-2 text-base text-gray-600">
+                  This can be implemented to optimize performance for fetching
+                  data from APIs, for example, search boxes in e-commerce
+                  websites where users make search request by typing product
+                  name in search box, which if not optimized then could lead to
+                  too many data fetch requests to the server, which could result
+                  in unnecessary load.
+                </p>
                 <div className="border rounded-lg overflow-hidden mt-4">
                   <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
-                    Index.html
+                    index.html
                   </h4>
                   <pre className="p-4">
                     <code className="text-gray-800">
@@ -288,7 +306,7 @@ window.addEventListener('scroll', throttledScroll);`}
 
                 <div className="border rounded-lg overflow-hidden mt-4">
                   <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
-                    Debounce vs Throttle Implementation Example
+                    index.js
                   </h4>
                   <pre className="p-4">
                     <code className="text-gray-800">
@@ -353,53 +371,76 @@ function throttle(cb, delay = 1000) {
                 <h3 className="mt-4 text-xl font-bold text-gray-800">
                   Explanation
                 </h3>
-                <p className="mt-2 text-base text-gray-600">
-                  The JavaScript code starts by selecting the relevant HTML
-                  elements using document.getElementById and
-                  document.querySelector.
-                </p>
-                <p className="mt-2 text-base text-gray-600">
-                  defaultText, debounceText, throttleText: Represent the "span"
-                  elements with IDs "defaultText", "debounceText", and
-                  "throttleText", respectively, where the text outputs will be
-                  displayed.
-                </p>
-                <p className="mt-2 text-base text-gray-600">
-                  Two functions, debounce and throttle, are defined. These
-                  functions will wrap the callback functions and control the
-                  timing of their execution.
-                </p>
-                <p className="mt-2 text-base text-gray-600">
-                  The updatedDebounceText and updatedThrottleText functions are
-                  created by passing the respective callback functions and the
-                  desired delay time (in milliseconds) to the debounce and
-                  throttle functions. These functions will be used to update the
-                  contents of the "Debounce Text" and "Throttle Text" elements,
-                  respectively.
-                </p>
-                <p className="mt-2 text-base text-gray-600">
-                  An event listener is added to the input field to listen for
-                  input events. When the user types in the input field, the
-                  event listener updates the "Default" text immediately and uses
-                  the updatedDebounceText and updatedThrottleText functions to
-                  update the "Debounce Text" and "Throttle Text" elements with a
-                  delay of 500 milliseconds.
-                </p>
-                <p className="mt-2 text-base text-gray-600">
-                  The debounce function is implemented to delay the execution of
-                  a function until after a certain time period has passed since
-                  the last time the debounced function was invoked. This helps
-                  prevent rapid, repeated calls to the function during user
-                  input.
-                </p>
-                <p className="mt-2 text-base text-gray-600">
-                  The throttle function is implemented to control how often a
-                  function can be called during a specific time period. It
-                  allows the function to execute at most once within the
-                  specified time interval, helping to limit the frequency of
-                  function calls during continuous events like scrolling or
-                  input.
-                </p>
+                <ul className="list-disc list-inside mt-2 text-base text-gray-600">
+                  <li className="flex">
+                    <span className="flex-shrink-0 mr-2">•</span>
+                    <span>
+                      The JavaScript code starts by selecting the relevant HTML
+                      elements using "document.getElementById" and
+                      "document.querySelector."
+                    </span>
+                  </li>
+                  <li className="flex">
+                    <span className="flex-shrink-0 mr-2">•</span>
+                    <span>
+                      defaultText, debounceText, throttleText: Represent the
+                      "span" elements with IDs "defaultText", "debounceText",
+                      and "throttleText," respectively, where the text outputs
+                      will be displayed.
+                    </span>
+                  </li>
+                  <li className="flex">
+                    <span className="flex-shrink-0 mr-2">•</span>
+                    <span>
+                      Two functions, debounce and throttle, are defined. These
+                      functions will wrap the callback functions and control the
+                      timing of their execution.
+                    </span>
+                  </li>
+                  <li className="flex">
+                    <span className="flex-shrink-0 mr-2">•</span>
+                    <span>
+                      The updatedDebounceText and updatedThrottleText functions
+                      are created by passing the respective callback functions
+                      and the desired delay time (in milliseconds) to the
+                      debounce and throttle functions. These functions will be
+                      used to update the contents of the "Debounce Text" and
+                      "Throttle Text" elements, respectively.
+                    </span>
+                  </li>
+                  <li className="flex">
+                    <span className="flex-shrink-0 mr-2">•</span>
+                    <span>
+                      An event listener is added to the input field to listen
+                      for input events. When the user types in the input field,
+                      the event listener updates the "Default" text immediately
+                      and uses the updatedDebounceText and updatedThrottleText
+                      functions to update the "Debounce Text" and "Throttle
+                      Text" elements with a delay of 500 milliseconds.
+                    </span>
+                  </li>
+                  <li className="flex">
+                    <span className="flex-shrink-0 mr-2">•</span>
+                    <span>
+                      The debounce function is implemented to delay the
+                      execution of a function until after a certain time period
+                      has passed since the last time the debounced function was
+                      invoked. This helps prevent rapid, repeated calls to the
+                      function during user input.
+                    </span>
+                  </li>
+                  <li className="flex">
+                    <span className="flex-shrink-0 mr-2">•</span>
+                    <span>
+                      The throttle function is implemented to control how often
+                      a function can be called during a specific time period. It
+                      allows the function to execute at most once within the
+                      specified time interval, helping to limit the frequency of
+                      function calls during continuous events like scrolling or
+                      input.
+                    </span>
+                  </li>
+                </ul>
 
                 <p className="mt-2 text-base text-gray-600">
                   In summary, debouncing delays the invocation of a function
