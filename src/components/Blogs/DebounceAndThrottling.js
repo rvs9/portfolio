@@ -253,8 +253,8 @@ window.addEventListener('scroll', throttledScroll);`}
                   data from APIs, for example, search boxes in e-commerce
                   websites where users make search request by typing product
                   name in search box, which if not optimized then could lead to
-                  too many data fetch requests to the server, which could result
-                  in unnecessary load.
+                  excessive API calls and resource-intensive operations, which could result
+                  in unnecessary load on the server.
                 </p>
                 <div className="border rounded-lg overflow-hidden mt-4">
                   <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
