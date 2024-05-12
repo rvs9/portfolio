@@ -279,27 +279,6 @@ const GraphQL = () => {
                   and flexibility of your API interactions, making it worth
                   considering for your next project.
                 </p>
-
-                {/* Call to Action */}
-                {/* <div className="flex justify-center mt-8">
-                  <Link
-                    to="/contact"
-                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline"
-                  >
-                    Contact Us to Learn More
-                  </Link>
-                </div> */}
-                <h3 className="mt-4 text-xl font-bold text-gray-800">
-                  Conclusion
-                </h3>
-                <p className="mt-2 text-base text-gray-600">
-                  GraphQL is a powerful and flexible alternative to traditional
-                  RESTful APIs. Its ability to allow clients to specify exactly
-                  what data they need and its real-time capabilities make it an
-                  excellent choice for modern applications. However, it's
-                  essential to consider your project's specific requirements and
-                  the learning curve before adopting GraphQL.
-                </p>
               </div>
             </div>
           </div>
@@ -307,7 +286,7 @@ const GraphQL = () => {
       </div>
       <div className="flex justify-center mt-8">
         <Link
-          to="/blogs"
+          to="/blog"
           className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           Read More Blog Posts

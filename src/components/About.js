@@ -1,4 +1,5 @@
-import Resume from "./Resume";
+// import Resume from "./Resume";
+// import resumePDF from "../assets/Rajat_Saraswat_Resume.pdf";
 
 const About = () => {
   return (
@@ -31,10 +32,19 @@ const About = () => {
               I'm committed to delivering high-quality solutions that meet
               client needs.
             </p>
-            <Resume />
           </div>
         </div>
       </div>
+      {/* <div className="flex justify-center mt-8">
+        <a
+          href={resumePDF}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 py-2 px-4 bg-blue-600 text-white rounded-md font-bold text-lg shadow-md hover:bg-blue-700 transition duration-300"
+        >
+          View Resume
+        </a>
+      </div> */}
     </section>
   );
 };

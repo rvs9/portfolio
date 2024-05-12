@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import blogImage from "../assets/RPO-image-canva.jpg";
 import datBlogImage from "../assets/DAT-blog-Image.png";
-import graphQLBlogImage from "../assets/graphQL-blog-image.png";
+
+import reactHooksImage from "../assets/reactHooks-Image2.jpg";
 
 const Blog = () => {
   return (
@@ -18,32 +19,6 @@ const Blog = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 md:mt-12 mx-10">
           <div className="bg-white rounded-lg shadow-md">
-            <img
-              src={graphQLBlogImage}
-              alt="Blog Post"
-              className="rounded-t-lg"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-bold text-gray-800">
-                Introduction to GraphQL
-              </h3>
-              <p className="mt-2 text-base text-gray-600">
-                GraphQL is the developer-friendly query language for the modern
-                web. It transforms how apps fetch data from an API, enabling you
-                to get exactly what you want by By providing a more efficient
-                and flexible way to fetch resources.
-              </p>
-              <div className="mt-4">
-                <Link
-                  className="py-2 px-4 bg-blue-600 text-white rounded-md font-bold text-lg shadow-md hover:bg-blue-700 transition duration-300"
-                  to="graphQL"
-                >
-                  Read More
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md">
             <img src={blogImage} alt="Blog Post" className="rounded-t-lg" />
             <div className="p-4">
               <h3 className="text-xl font-bold text-gray-800">
@@ -59,13 +34,14 @@ const Blog = () => {
               <div className="mt-4">
                 <Link
                   className="py-2 px-4 bg-blue-600 text-white rounded-md font-bold text-lg shadow-md hover:bg-blue-700 transition duration-300"
-                  to="Performance-Optimization-in-React"
+                  to="/blog/Performance-Optimization-in-React"
                 >
                   Read More
                 </Link>
               </div>
             </div>
           </div>
+
           <div className="bg-white rounded-lg shadow-md">
             <img src={datBlogImage} alt="Blog Post" className="rounded-t-lg" />
             <div className="p-4">
@@ -81,7 +57,35 @@ const Blog = () => {
               <div className="mt-4">
                 <Link
                   className="py-2 px-4 bg-blue-600 text-white rounded-md font-bold text-lg shadow-md hover:bg-blue-700 transition duration-300"
-                  to="debounce-and-throttle"
+                  to="/blog/debounce-and-throttle"
+                >
+                  Read More
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md">
+            <img
+              src={reactHooksImage}
+              alt="Blog Post"
+              className="rounded-t-lg"
+            />
+            <div className="p-4">
+              <h3 className="text-xl font-bold text-gray-800">
+                Understanding React Hooks
+              </h3>
+              <p className="mt-2 text-base text-gray-600">
+                React Hooks provide a more elegant and functional approach to
+                managing state, side effects, and other React features within
+                functional components. Let's dive in and discover how React
+                Hooks can offer a cleaner and more concise way to write React
+                code, making it easier to understand, maintain, and test.
+              </p>
+              <div className="mt-4">
+                <Link
+                  className="py-2 px-4 bg-blue-600 text-white rounded-md font-bold text-lg shadow-md hover:bg-blue-700 transition duration-300"
+                  to="/blog/react-hooks"
                 >
                   Read More
                 </Link>
@@ -89,6 +93,15 @@ const Blog = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex justify-center mt-8">
+        <Link
+          to="/blog"
+          className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Read More Blog Posts
+        </Link>
       </div>
     </section>
   );

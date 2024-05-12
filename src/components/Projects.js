@@ -1,4 +1,5 @@
 import ProjectCard from "./Cards/ProjectCard";
+// import pbLogo from "../assets/pbLogo1.png";
 
 const Projects = () => {
   const projects = [
@@ -10,6 +11,14 @@ const Projects = () => {
     //     "https://pwpblog.wpengine.com/wp-content/uploads/2022/08/Ecommerce-Website-Promotion_Final.png",
     //   github: "https://github.com/your-username/project1",
     // },
+    {
+      title: "Protein Bowl",
+      description: "A Protein rich and healthy food chain.",
+      technologies: ["React", "Redux", "JavaScript", "Tailwind CSS"],
+      image:
+        "https://www.proteinbowl.in/static/media/GardenCobb.3c0c8cebeec0fa448585.jpg",
+      github: "https://www.proteinbowl.in",
+    },
     {
       title: "Weather App",
       description:

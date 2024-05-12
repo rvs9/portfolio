@@ -27,13 +27,13 @@ const Contact = () => {
           <div className="max-w-sm rounded overflow-hidden shadow-lg mx-4">
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Phone</div>
-              <p className="text-gray-700 text-base">+91 7060 322 330</p>
+              <p className="text-gray-700 text-base">+91 7060 322 333</p>
             </div>
           </div>
         </div>
         <div className="flex justify-center mt-8">
           <a
-            href="https://www.linkedin.com/in/rajatsaraswat9/"
+            href="https://www.linkedin.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="mr-4"

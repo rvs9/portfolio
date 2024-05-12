@@ -500,7 +500,7 @@ const newData = [...data, 4];`}
       </div>
       <div className="flex justify-center mt-8">
         <Link
-          to="/blogs"
+          to="/blog"
           className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           Read More Blog Posts

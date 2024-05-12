@@ -9,7 +9,6 @@ import reactLogo from "../assets/react-icon.svg";
 import reduxLogo from "../assets/redux-logo.png";
 import tailwindLogo from "../assets/tailwind-icon.svg";
 
-
 const Home = () => {
   return (
     <section
@@ -27,7 +26,7 @@ const Home = () => {
           </p>
           <div className="flex mt-4 justify-center md:justify-start">
             <a
-              href="https://www.linkedin.com/in/rajatsaraswat9/"
+              href="https://www.linkedin.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center mt-4 text-blue-500 hover:text-blue-700"
@@ -107,7 +106,6 @@ const Home = () => {
               className="h-8 w-8 object-contain"
             />
           </div>
-          
         </div>
       </div>
     </section>

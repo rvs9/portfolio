@@ -253,8 +253,8 @@ window.addEventListener('scroll', throttledScroll);`}
                   data from APIs, for example, search boxes in e-commerce
                   websites where users make search request by typing product
                   name in search box, which if not optimized then could lead to
-                  excessive API calls and resource-intensive operations, which could result
-                  in unnecessary load on the server.
+                  excessive API calls and resource-intensive operations, which
+                  could result in unnecessary load on the server.
                 </p>
                 <div className="border rounded-lg overflow-hidden mt-4">
                   <h4 className="bg-gray-200 p-3 text-lg font-bold text-gray-800">
@@ -491,7 +491,7 @@ function throttle(cb, delay = 1000) {
         </div>
         <div className="flex justify-center mt-12">
           <Link
-            to="/blogs"
+            to="/blog"
             className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Back to Blogs

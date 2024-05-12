@@ -28,7 +28,7 @@ const ProjectCard = ({ project }) => {
             rel="noopener noreferrer"
             className="text-blue-500 hover:text-blue-600 font-semibold"
           >
-            View Code
+            Visit {project.title}
           </a>
         </div>
       </div>
